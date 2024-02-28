@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <link rel="icon" type="image" href="assets\Message-icon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="./login.css" />
+</head>
+
+<body class="align">
+  <h1>Omingle</h1>
+  <div class="grid">
+    <form name="form" id="myForm" class="form login" action="login.php" method="post">
+      <div class="form__field">
+        <label for="login__username"><svg class="icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons.svg#user"></use>
+          </svg><span class="hidden">Username</span></label>
+        <input id="login__username" type="text" name="username" class="form__input" placeholder="Username" required />
+      </div>
+
+      <div class="form__field">
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+
+    <p class="text--center">Talk to strangers
+      <svg class="icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons.svg#arrow-right"></use>
+      </svg>
+    </p>
+  </div>
+</body>
+<script>
+  const form = document.getElementById("myForm");
+  const user = document.getElementById("login__username");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    localStorage.setItem("user", user.value);
+
+    window.location.href = "client.html";
+  })
+
+</script>
+
+</html>

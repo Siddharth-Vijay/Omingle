@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="align">
+    <h1 class='text-center'>
+        <div class="status">Connecting...</div>
+    </h1>
+
+    <!--All messages will appear within this tag-->
+    <div class='messages' id="messages" onload="toBottom">
+        <div id="anchor"></div>
+    </div>
+
+
+
+    <form action="#" method="post" class="messageBox">
+        <label for="message">
+            <span id="user">Guest:</span>
+            <input type="text" id="message" placeholder="Type message..." required>
+        </label>&nbsp;
+        <input id="send" type="submit" value="Send">
+    </form>
+
+    <input type="button" value="Close Connection" id="close">
+</body>
+<script src="client.js"></script>
+
+</html>
