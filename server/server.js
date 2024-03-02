@@ -40,3 +40,6 @@ if (!module.parent) {
 } else {
   exports.accept = accept;
 }
+
+//80 --> http
+//443 --> https
